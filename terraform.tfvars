@@ -1,0 +1,1 @@
+ecr_image_uri = "614768946157.dkr.ecr.us-east-1.amazonaws.com/translator-app:latest"
