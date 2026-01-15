@@ -85,7 +85,3 @@ Key features of the module:
 Just like the **Malik AI ECS project**, this pipeline includes **Snyk** to scan:
 - Terraform IaC for security issues
 - Misconfigurations and policy risks before deployment
-
----
-├── requirements.txt
-└── README.md
