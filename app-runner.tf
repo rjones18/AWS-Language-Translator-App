@@ -36,3 +36,37 @@ module "translator_apprunner" {
     ManagedBy   = "terraform"
   }
 }
+
+# --------------------------------------------
+# Allow App Runner runtime role to call AWS Translate
+# --------------------------------------------
+resource "aws_iam_policy" "apprunner_translate" {
+  name        = "translator-${var.environment}-apprunner-translate"
+  description = "Allow App Runner instance role to call AWS Translate and Amazon Polly"
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Sid    = "TranslateAndPolly"
+        Effect = "Allow"
+        Action = [
+          "translate:TranslateText",
+          "polly:SynthesizeSpeech",
+          "polly:DescribeVoices"
+        ]
+        Resource = "*"
+      }
+    ]
+  })
+}
+
+
+locals {
+  apprunner_instance_role_name = regex("role/(.+)$", module.translator_apprunner.instance_role_arn)[0]
+}
+
+resource "aws_iam_role_policy_attachment" "apprunner_translate_attach" {
+  role       = local.apprunner_instance_role_name
+  policy_arn = aws_iam_policy.apprunner_translate.arn
+}
+
