@@ -9,15 +9,7 @@ This project demonstrates a modern, fully managed AWS architecture using **Terra
 
 ## 🎥 Demo
 
-> 📽️ **Demo Video Coming Soon**
-
-The demo will show:
-- Selecting a target language
-- Translating English text
-- Playing synthesized speech audio
-- Live App Runner deployment in action
-
-(You can embed a video or link here once uploaded.)
+Link to Demo Video: https://youtu.be/qey70KKCWTg
 
 ---
 
