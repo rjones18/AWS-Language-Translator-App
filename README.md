@@ -7,6 +7,20 @@ This project demonstrates a modern, fully managed AWS architecture using **Terra
 
 ---
 
+## 🎥 Demo
+
+> 📽️ **Demo Video Coming Soon**
+
+The demo will show:
+- Selecting a target language
+- Translating English text
+- Playing synthesized speech audio
+- Live App Runner deployment in action
+
+(You can embed a video or link here once uploaded.)
+
+---
+
 ## 🚀 Features
 
 - 🌍 Translate English into **Spanish, French, or Japanese**
@@ -73,28 +87,5 @@ Just like the **Malik AI ECS project**, this pipeline includes **Snyk** to scan:
 - Misconfigurations and policy risks before deployment
 
 ---
-
-## 🎥 Demo
-
-> 📽️ **Demo Video Coming Soon**
-
-The demo will show:
-- Selecting a target language
-- Translating English text
-- Playing synthesized speech audio
-- Live App Runner deployment in action
-
-(You can embed a video or link here once uploaded.)
-
----
-
-## 📦 Repository Structure
-
-```text
-.
-├── app/                    # Flask application code
-├── terraform/              # App Runner infrastructure
-├── .github/workflows/      # GitHub Actions CI/CD
-├── Dockerfile
 ├── requirements.txt
 └── README.md
